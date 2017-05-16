@@ -2,6 +2,9 @@ package com.jk.task;
 
 import com.jk.model.ScheduleJob;
 import com.jk.util.ScheduleUtils;
+import com.xiaoleilu.hutool.log.Log;
+import com.xiaoleilu.hutool.log.LogFactory;
+
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -13,6 +16,7 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
  */
 @Slf4j
 public class AsyncJobFactory extends QuartzJobBean {
+	protected final transient Log log = LogFactory.get(this.getClass());
 
 	@Override
 	protected void executeInternal(JobExecutionContext context) throws JobExecutionException {

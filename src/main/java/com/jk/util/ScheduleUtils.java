@@ -4,6 +4,9 @@ import com.jk.exception.MyException;
 import com.jk.model.ScheduleJob;
 import com.jk.task.AsyncJobFactory;
 import com.jk.task.SyncJobFactory;
+import com.xiaoleilu.hutool.log.Log;
+import com.xiaoleilu.hutool.log.LogFactory;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.quartz.*;
@@ -18,6 +21,8 @@ import java.lang.reflect.Method;
  */
 @Slf4j
 public class ScheduleUtils {
+	
+	protected final transient static Log log = LogFactory.get(ScheduleUtils.class);
 
     /**
      * 获取触发器key

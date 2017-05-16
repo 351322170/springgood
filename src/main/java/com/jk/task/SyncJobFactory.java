@@ -2,6 +2,9 @@ package com.jk.task;
 
 import com.jk.model.ScheduleJob;
 import com.jk.util.ScheduleUtils;
+import com.xiaoleilu.hutool.log.Log;
+import com.xiaoleilu.hutool.log.LogFactory;
+
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.JobExecutionContext;
@@ -17,6 +20,7 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 @PersistJobDataAfterExecution
 @DisallowConcurrentExecution
 public class SyncJobFactory extends QuartzJobBean {
+	protected final transient Log log = LogFactory.get(this.getClass());
 
 	@Override
 	public void executeInternal(JobExecutionContext context) throws JobExecutionException {

@@ -11,7 +11,12 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class Role extends BaseEntity{
 
-    //超级管理员标识
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//超级管理员标识
     public static final String ROLE_TYPE = "ROEL_ADMIN";
 
     /**
@@ -28,4 +33,30 @@ public class Role extends BaseEntity{
      * 备注
      */
     private String remark;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPerms() {
+		return perms;
+	}
+
+	public void setPerms(String perms) {
+		this.perms = perms;
+	}
+
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+    
+    
 }

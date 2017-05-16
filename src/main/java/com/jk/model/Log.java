@@ -15,6 +15,10 @@ import java.util.Map;
 public class Log extends BaseEntity{
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
      * 应用名称
      */
     private String appName;
@@ -66,8 +70,166 @@ public class Log extends BaseEntity{
      * 客户端信息
      */
     private String userAgent;
+    
+    
 
-    public void setParams(Map<String, String[]> paramMap) {
+    public String getAppName() {
+		return appName;
+	}
+
+
+
+	public void setAppName(String appName) {
+		this.appName = appName;
+	}
+
+
+
+	public Integer getLogType() {
+		return logType;
+	}
+
+
+
+	public void setLogType(Integer logType) {
+		this.logType = logType;
+	}
+
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+
+	public String getOperation() {
+		return operation;
+	}
+
+
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
+
+
+
+	public String getMethodName() {
+		return methodName;
+	}
+
+
+
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
+
+
+
+	public String getRequestMethod() {
+		return requestMethod;
+	}
+
+
+
+	public void setRequestMethod(String requestMethod) {
+		this.requestMethod = requestMethod;
+	}
+
+
+
+	public String getRequestParams() {
+		return requestParams;
+	}
+
+
+
+	public void setRequestParams(String requestParams) {
+		this.requestParams = requestParams;
+	}
+
+
+
+	public String getRequestIp() {
+		return requestIp;
+	}
+
+
+
+	public void setRequestIp(String requestIp) {
+		this.requestIp = requestIp;
+	}
+
+
+
+	public String getRequestUri() {
+		return requestUri;
+	}
+
+
+
+	public void setRequestUri(String requestUri) {
+		this.requestUri = requestUri;
+	}
+
+
+
+	public String getExceptionCode() {
+		return exceptionCode;
+	}
+
+
+
+	public void setExceptionCode(String exceptionCode) {
+		this.exceptionCode = exceptionCode;
+	}
+
+
+
+	public String getExceptionDetail() {
+		return exceptionDetail;
+	}
+
+
+
+	public void setExceptionDetail(String exceptionDetail) {
+		this.exceptionDetail = exceptionDetail;
+	}
+
+
+
+	public Long getTimeConsuming() {
+		return timeConsuming;
+	}
+
+
+
+	public void setTimeConsuming(Long timeConsuming) {
+		this.timeConsuming = timeConsuming;
+	}
+
+
+
+	public String getUserAgent() {
+		return userAgent;
+	}
+
+
+
+	public void setUserAgent(String userAgent) {
+		this.userAgent = userAgent;
+	}
+
+
+
+	public void setParams(Map<String, String[]> paramMap) {
         if (paramMap == null) {
             return;
         }

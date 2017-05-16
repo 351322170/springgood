@@ -13,6 +13,10 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class ScheduleJob extends BaseEntity {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static final String STATUS_RUNNING = "1";
 	public static final String STATUS_NOT_RUNNING = "0";
 
@@ -78,4 +82,102 @@ public class ScheduleJob extends BaseEntity {
 	 * 修改者
      */
 	private Long modifyBy;
+
+	public String getJobName() {
+		return jobName;
+	}
+
+	public void setJobName(String jobName) {
+		this.jobName = jobName;
+	}
+
+	public String getJobGroup() {
+		return jobGroup;
+	}
+
+	public void setJobGroup(String jobGroup) {
+		this.jobGroup = jobGroup;
+	}
+
+	public String getCron() {
+		return cron;
+	}
+
+	public void setCron(String cron) {
+		this.cron = cron;
+	}
+
+	public String getBeanClass() {
+		return beanClass;
+	}
+
+	public void setBeanClass(String beanClass) {
+		this.beanClass = beanClass;
+	}
+
+	public String getMethodName() {
+		return methodName;
+	}
+
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
+
+	public String getJobTrigger() {
+		return jobTrigger;
+	}
+
+	public void setJobTrigger(String jobTrigger) {
+		this.jobTrigger = jobTrigger;
+	}
+
+	public String getParams() {
+		return params;
+	}
+
+	public void setParams(String params) {
+		this.params = params;
+	}
+
+	public Boolean getIsSync() {
+		return isSync;
+	}
+
+	public void setIsSync(Boolean isSync) {
+		this.isSync = isSync;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getRemarks() {
+		return remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
+
+	public Long getCreateBy() {
+		return createBy;
+	}
+
+	public void setCreateBy(Long createBy) {
+		this.createBy = createBy;
+	}
+
+	public Long getModifyBy() {
+		return modifyBy;
+	}
+
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
+	
+	
 }

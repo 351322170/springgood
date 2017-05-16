@@ -15,6 +15,11 @@ import java.util.Date;
 public class Content extends BaseEntity {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * 内容分类ID
      */
     private Long contentCatId;
@@ -53,5 +58,71 @@ public class Content extends BaseEntity {
      * 时间
      */
     private Date time;
+
+	public Long getContentCatId() {
+		return contentCatId;
+	}
+
+	public void setContentCatId(Long contentCatId) {
+		this.contentCatId = contentCatId;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getSubTitle() {
+		return subTitle;
+	}
+
+	public void setSubTitle(String subTitle) {
+		this.subTitle = subTitle;
+	}
+
+	public String getTitleDesc() {
+		return titleDesc;
+	}
+
+	public void setTitleDesc(String titleDesc) {
+		this.titleDesc = titleDesc;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public Date getTime() {
+		return time;
+	}
+
+	public void setTime(Date time) {
+		this.time = time;
+	}
+    
+    
 
 }
